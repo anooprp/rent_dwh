@@ -1,5 +1,5 @@
-from rent_json import RentData
-from util import s3_file_download,s3_delete_file
+from rent_dwh.rent_json import RentData
+from rent_dwh.util import s3_file_download,s3_delete_file
 import os
 from datetime import datetime
 
@@ -90,31 +90,31 @@ def load_tables():
     md=RentData()
     md.input_filename=filename
     md.load_data_from_file()
-    del md
+
 
     ## load contact_details Table
     md.export_to_file(contactDetails,'contact_details')
     md.postgres_data_load('temp.contact_details',md.filename,'Y','|')
     md.target_data_load('data_export.contact_details','id')
-    del md
+
 
     ## load realestate_details Table
     md.export_to_file(realEstateDetails,'realestate_details')
     md.postgres_data_load('temp.realestate_details',md.filename,'Y','|')
     md.target_data_load('data_export.realestate_details','id')
-    del md
+
 
     ##load contact_form_config Table
     md.export_to_file(contactFormDetails,'contact_form_config')
     md.postgres_data_load('temp.contact_form_config',md.filename,'Y','|')
     md.target_data_load('data_export.realestate_details','id')
-    del md
+
 
     ##load realEstateTitle Table
     md.export_to_file(realEstateTitle,'realEstateTitle')
     md.postgres_data_load('temp.realestate_title',md.filename,'Y','|')
     md.target_data_load('data_export.realestate_title','id')
-    del md
+
 
     ##load fact_flat Table
     md.export_to_file(fact_flat, 'fact_flat', '|')
