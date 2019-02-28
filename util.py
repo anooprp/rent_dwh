@@ -15,10 +15,10 @@ def s3_file_download( bucket_name,file_key,output_filename):
     return save_as
 
 def s3_delete_file(bucket,s3_filekey):
-    transfer = S3Transfer(boto3.client('s3',
-                                       aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID']
-                                       , aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY']))
-    transfer.Object(bucket, s3_filekey).delete()
+    resource = boto3.resource('s3', 'us-east-1',aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+                              aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'])
+
+    resource.Object(bucket, s3_filekey).delete()
 
 def get_postgres_con():
 
