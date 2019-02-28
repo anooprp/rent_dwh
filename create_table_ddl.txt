@@ -1,0 +1,325 @@
+CREATE TABLE data_export.contact_details (
+    id varchar(1000) NULL,
+    contact_details_id varchar(1000) NULL,
+    contact_details_address_city varchar(1000) NULL,
+    contact_details_address_houseno varchar(1000) NULL,
+    contact_details_address_postcode varchar(1000) NULL,
+    contact_details_address_street varchar(1000) NULL,
+    contact_details_cellphonenumber varchar(1000) NULL,
+    contact_details_cellphonenumberareacode varchar(1000) NULL,
+    contact_details_cellphonenumbercountrycode varchar(1000) NULL,
+    contact_details_cellphonenumbersubscriber varchar(1000) NULL,
+    contact_details_company varchar(1000) NULL,
+    contact_details_countrycode varchar(1000) NULL,
+    contact_details_email varchar(1000) NULL,
+    contact_details_faxnumber varchar(1000) NULL,
+    contact_details_faxnumberareacode varchar(1000) NULL,
+    contact_details_faxnumbercountrycode varchar(1000) NULL,
+    contact_details_faxnumbersubscriber varchar(1000) NULL,
+    contact_details_firstname varchar(1000) NULL,
+    contact_details_homepageurl varchar(1000) NULL,
+    contact_details_lastname varchar(1000) NULL,
+    contact_details_phonenumber varchar(1000) NULL,
+    contact_details_phonenumberareacode varchar(1000) NULL,
+    contact_details_phonenumbercountrycode varchar(1000) NULL,
+    contact_details_phonenumbersubscriber varchar(1000) NULL,
+    contact_details_salutation varchar(1000) NULL
+);
+
+
+
+CREATE TABLE data_export.contact_form_config (
+    id varchar(1000) NULL,
+    contactformconfiguration_addressfield varchar(1000) NULL,
+    contactformconfiguration_applicationpackagecompletedfield varchar(1000) NULL,
+    contactformconfiguration_emailaddressfield varchar(1000) NULL,
+    contactformconfiguration_employmentrelationshipfield varchar(1000) NULL,
+    contactformconfiguration_firstnamefield varchar(1000) NULL,
+    contactformconfiguration_freemiumsettings_duration varchar(1000) NULL,
+    contactformconfiguration_incomefield varchar(1000) NULL,
+    contactformconfiguration_lastnamefield varchar(1000) NULL,
+    contactformconfiguration_messagefield varchar(1000) NULL,
+    contactformconfiguration_moveindatefield varchar(1000) NULL,
+    contactformconfiguration_numberofpersonsfield varchar(1000) NULL,
+    contactformconfiguration_petsinhouseholdfield varchar(1000) NULL,
+    contactformconfiguration_phonenumberfield varchar(1000) NULL,
+    contactformconfiguration_premiumprofilerequired varchar(1000) NULL,
+    contactformconfiguration_salutationfield varchar(1000) NULL
+);
+
+
+
+CREATE TABLE data_export.realestate_details (
+    id varchar(1000) NULL,
+    realestate_id varchar(1000) NULL,
+    realestate_xsi_type varchar(1000) NULL,
+    realestate_address_city varchar(1000) NULL,
+    realestate_address_geohierarchy_city_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_city_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_city_name varchar(1000) NULL,
+    realestate_address_geohierarchy_continent_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_continent_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_country_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_country_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_country_name varchar(1000) NULL,
+    realestate_address_geohierarchy_neighbourhood_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_quarter_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_quarter_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_quarter_name varchar(1000) NULL,
+    realestate_address_geohierarchy_region_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_region_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_region_name varchar(1000) NULL,
+    realestate_address_postcode varchar(1000) NULL,
+    realestate_address_quarter varchar(1000) NULL
+);
+
+
+
+
+
+CREATE TABLE data_export.realestate_title (
+    id varchar(1000) NULL,
+    realestate_title varchar(1000) NULL,
+    realestate_titlepicture_creation varchar(1000) NULL,
+    realestate_titlepicture_id varchar(1000) NULL,
+    realestate_titlepicture_modification varchar(1000) NULL,
+    realestate_titlepicture_publishdate varchar(1000) NULL,
+    realestate_titlepicture_floorplan varchar(1000) NULL,
+    realestate_titlepicture_title varchar(1000) NULL,
+    realestate_titlepicture_titlepicture varchar(1000) NULL,
+    realestate_titlepicture_urls text NULL
+);
+
+
+
+
+CREATE TABLE data_export.fact_flat (
+    id varchar(1000) NULL,
+    creation varchar(1000) NULL,
+    "﻿contactformtype" varchar(1000) NULL,
+    modification varchar(1000) NULL,
+    publishdate varchar(1000) NULL,
+    companywidecustomerid varchar(1000) NULL,
+    realestate_apartmenttype varchar(1000) NULL,
+    realestate_assistedliving varchar(1000) NULL,
+    realestate_attachments text NULL,
+    realestate_balcony varchar(1000) NULL,
+    realestate_baserent varchar(1000) NULL,
+    realestate_buildingenergyratingtype varchar(1000) NULL,
+    realestate_builtinkitchen varchar(1000) NULL,
+    realestate_calculatedtotalrent varchar(1000) NULL,
+    realestate_calculatedtotalrentscope varchar(1000) NULL,
+    realestate_cellar varchar(1000) NULL,
+    realestate_certificateofeligibilityneeded varchar(1000) NULL,
+    realestate_condition varchar(1000) NULL,
+    realestate_constructionyear varchar(1000) NULL,
+    realestate_courtage_hascourtage varchar(1000) NULL,
+    realestate_creationdate varchar(1000) NULL,
+    realestate_deposit varchar(1000) NULL,
+    realestate_descriptionnote text NULL,
+    realestate_energycertificate_energycertificateavailability text NULL,
+    realestate_energycertificate_energycertificatecreationdate text NULL,
+    realestate_energyconsumptioncontainswarmwater text NULL,
+    realestate_energyperformancecertificate text NULL,
+    realestate_externalid varchar(1000) NULL,
+    realestate_floor varchar(1000) NULL,
+    realestate_floorplan varchar(1000) NULL,
+    realestate_freefrom varchar(1000) NULL,
+    realestate_furnishingnote text NULL,
+    realestate_garden varchar(1000) NULL,
+    realestate_guesttoilet varchar(1000) NULL,
+    realestate_handicappedaccessible varchar(1000) NULL,
+    realestate_heatingcosts varchar(1000) NULL,
+    realestate_heatingcostsinservicecharge varchar(1000) NULL,
+    realestate_heatingtype varchar(1000) NULL,
+    realestate_heatingtypeenev2014 varchar(1000) NULL,
+    realestate_interiorquality varchar(1000) NULL,
+    realestate_lastmodificationdate varchar(1000) NULL,
+    realestate_lastrefurbishment varchar(1000) NULL,
+    realestate_lift varchar(1000) NULL,
+    realestate_livingspace varchar(1000) NULL,
+    realestate_locationnote text NULL,
+    realestate_numberoffloors varchar(1000) NULL,
+    realestate_numberofrooms varchar(1000) NULL,
+    realestate_othernote text NULL,
+    realestate_petsallowed varchar(1000) NULL,
+    realestate_referencepriceapicall varchar(1000) NULL,
+    realestate_referencepriceservicecall varchar(1000) NULL,
+    realestate_servicecharge varchar(1000) NULL,
+    realestate_state varchar(1000) NULL,
+    realestate_thermalcharacteristic varchar(1000) NULL,
+    realestate_totalrent varchar(1000) NULL,
+    realestate_useasflatshareroom varchar(1000) NULL,
+    realtorvaluationjsonlink_xlink_href varchar(1000) NULL,
+    realtorvaluationv2jsonlink_xlink_href varchar(1000) NULL,
+    realtorvaluationv2jsonplink_xlink_href varchar(1000) NULL,
+    xlink_href varchar(1000) NULL,
+    adlinkforjsonp_xlink_href text NULL,
+    adlinkforxmldata_xlink_href text NULL,
+    imprintlink_xlink_href text NULL
+);
+
+
+
+
+CREATE TABLE temp.contact_details (
+    id varchar(1000) NULL,
+    contact_details_id varchar(1000) NULL,
+    contact_details_address_city varchar(1000) NULL,
+    contact_details_address_houseno varchar(1000) NULL,
+    contact_details_address_postcode varchar(1000) NULL,
+    contact_details_address_street varchar(1000) NULL,
+    contact_details_cellphonenumber varchar(1000) NULL,
+    contact_details_cellphonenumberareacode varchar(1000) NULL,
+    contact_details_cellphonenumbercountrycode varchar(1000) NULL,
+    contact_details_cellphonenumbersubscriber varchar(1000) NULL,
+    contact_details_company varchar(1000) NULL,
+    contact_details_countrycode varchar(1000) NULL,
+    contact_details_email varchar(1000) NULL,
+    contact_details_faxnumber varchar(1000) NULL,
+    contact_details_faxnumberareacode varchar(1000) NULL,
+    contact_details_faxnumbercountrycode varchar(1000) NULL,
+    contact_details_faxnumbersubscriber varchar(1000) NULL,
+    contact_details_firstname varchar(1000) NULL,
+    contact_details_homepageurl varchar(1000) NULL,
+    contact_details_lastname varchar(1000) NULL,
+    contact_details_phonenumber varchar(1000) NULL,
+    contact_details_phonenumberareacode varchar(1000) NULL,
+    contact_details_phonenumbercountrycode varchar(1000) NULL,
+    contact_details_phonenumbersubscriber varchar(1000) NULL,
+    contact_details_salutation varchar(1000) NULL
+);
+
+
+
+CREATE TABLE temp.contact_form_config (
+    id varchar(1000) NULL,
+    contactformconfiguration_addressfield varchar(1000) NULL,
+    contactformconfiguration_applicationpackagecompletedfield varchar(1000) NULL,
+    contactformconfiguration_emailaddressfield varchar(1000) NULL,
+    contactformconfiguration_employmentrelationshipfield varchar(1000) NULL,
+    contactformconfiguration_firstnamefield varchar(1000) NULL,
+    contactformconfiguration_freemiumsettings_duration varchar(1000) NULL,
+    contactformconfiguration_incomefield varchar(1000) NULL,
+    contactformconfiguration_lastnamefield varchar(1000) NULL,
+    contactformconfiguration_messagefield varchar(1000) NULL,
+    contactformconfiguration_moveindatefield varchar(1000) NULL,
+    contactformconfiguration_numberofpersonsfield varchar(1000) NULL,
+    contactformconfiguration_petsinhouseholdfield varchar(1000) NULL,
+    contactformconfiguration_phonenumberfield varchar(1000) NULL,
+    contactformconfiguration_premiumprofilerequired varchar(1000) NULL,
+    contactformconfiguration_salutationfield varchar(1000) NULL
+);
+
+
+
+CREATE TABLE temp.realestate_details (
+    id varchar(1000) NULL,
+    realestate_id varchar(1000) NULL,
+    realestate_xsi_type varchar(1000) NULL,
+    realestate_address_city varchar(1000) NULL,
+    realestate_address_geohierarchy_city_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_city_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_city_name varchar(1000) NULL,
+    realestate_address_geohierarchy_continent_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_continent_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_country_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_country_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_country_name varchar(1000) NULL,
+    realestate_address_geohierarchy_neighbourhood_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_quarter_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_quarter_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_quarter_name varchar(1000) NULL,
+    realestate_address_geohierarchy_region_fullgeocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_region_geocodeid varchar(1000) NULL,
+    realestate_address_geohierarchy_region_name varchar(1000) NULL,
+    realestate_address_postcode varchar(1000) NULL,
+    realestate_address_quarter varchar(1000) NULL
+);
+
+
+
+
+
+CREATE TABLE temp.realestate_title (
+    id varchar(1000) NULL,
+    realestate_title varchar(1000) NULL,
+    realestate_titlepicture_creation varchar(1000) NULL,
+    realestate_titlepicture_id varchar(1000) NULL,
+    realestate_titlepicture_modification varchar(1000) NULL,
+    realestate_titlepicture_publishdate varchar(1000) NULL,
+    realestate_titlepicture_floorplan varchar(1000) NULL,
+    realestate_titlepicture_title varchar(1000) NULL,
+    realestate_titlepicture_titlepicture varchar(1000) NULL,
+    realestate_titlepicture_urls text NULL
+);
+
+
+
+
+CREATE TABLE temp.fact_flat (
+    id varchar(1000) NULL,
+    creation varchar(1000) NULL,
+    "﻿contactformtype" varchar(1000) NULL,
+    modification varchar(1000) NULL,
+    publishdate varchar(1000) NULL,
+    companywidecustomerid varchar(1000) NULL,
+    realestate_apartmenttype varchar(1000) NULL,
+    realestate_assistedliving varchar(1000) NULL,
+    realestate_attachments text NULL,
+    realestate_balcony varchar(1000) NULL,
+    realestate_baserent varchar(1000) NULL,
+    realestate_buildingenergyratingtype varchar(1000) NULL,
+    realestate_builtinkitchen varchar(1000) NULL,
+    realestate_calculatedtotalrent varchar(1000) NULL,
+    realestate_calculatedtotalrentscope varchar(1000) NULL,
+    realestate_cellar varchar(1000) NULL,
+    realestate_certificateofeligibilityneeded varchar(1000) NULL,
+    realestate_condition varchar(1000) NULL,
+    realestate_constructionyear varchar(1000) NULL,
+    realestate_courtage_hascourtage varchar(1000) NULL,
+    realestate_creationdate varchar(1000) NULL,
+    realestate_deposit varchar(1000) NULL,
+    realestate_descriptionnote text NULL,
+    realestate_energycertificate_energycertificateavailability text NULL,
+    realestate_energycertificate_energycertificatecreationdate text NULL,
+    realestate_energyconsumptioncontainswarmwater text NULL,
+    realestate_energyperformancecertificate text NULL,
+    realestate_externalid varchar(1000) NULL,
+    realestate_floor varchar(1000) NULL,
+    realestate_floorplan varchar(1000) NULL,
+    realestate_freefrom varchar(1000) NULL,
+    realestate_furnishingnote text NULL,
+    realestate_garden varchar(1000) NULL,
+    realestate_guesttoilet varchar(1000) NULL,
+    realestate_handicappedaccessible varchar(1000) NULL,
+    realestate_heatingcosts varchar(1000) NULL,
+    realestate_heatingcostsinservicecharge varchar(1000) NULL,
+    realestate_heatingtype varchar(1000) NULL,
+    realestate_heatingtypeenev2014 varchar(1000) NULL,
+    realestate_interiorquality varchar(1000) NULL,
+    realestate_lastmodificationdate varchar(1000) NULL,
+    realestate_lastrefurbishment varchar(1000) NULL,
+    realestate_lift varchar(1000) NULL,
+    realestate_livingspace varchar(1000) NULL,
+    realestate_locationnote text NULL,
+    realestate_numberoffloors varchar(1000) NULL,
+    realestate_numberofrooms varchar(1000) NULL,
+    realestate_othernote text NULL,
+    realestate_petsallowed varchar(1000) NULL,
+    realestate_referencepriceapicall varchar(1000) NULL,
+    realestate_referencepriceservicecall varchar(1000) NULL,
+    realestate_servicecharge varchar(1000) NULL,
+    realestate_state varchar(1000) NULL,
+    realestate_thermalcharacteristic varchar(1000) NULL,
+    realestate_totalrent varchar(1000) NULL,
+    realestate_useasflatshareroom varchar(1000) NULL,
+    realtorvaluationjsonlink_xlink_href varchar(1000) NULL,
+    realtorvaluationv2jsonlink_xlink_href varchar(1000) NULL,
+    realtorvaluationv2jsonplink_xlink_href varchar(1000) NULL,
+    xlink_href varchar(1000) NULL,
+    adlinkforjsonp_xlink_href text NULL,
+    adlinkforxmldata_xlink_href text NULL,
+    imprintlink_xlink_href text NULL
+);
+
