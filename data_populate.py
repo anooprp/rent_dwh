@@ -1,5 +1,5 @@
-from rent_dwh.rent_json import RentData
-from rent_dwh.util import s3_file_download,s3_delete_file
+from rent_json import RentData
+from util import s3_file_download,s3_move_file
 import os
 from datetime import datetime
 
@@ -107,7 +107,7 @@ def load_tables():
     ##load contact_form_config Table
     md.export_to_file(contactFormDetails,'contact_form_config')
     md.postgres_data_load('temp.contact_form_config',md.filename,'Y','|')
-    md.target_data_load('data_export.realestate_details','id')
+    md.target_data_load('data_export.contact_form_config','id')
 
 
     ##load realEstateTitle Table
@@ -126,4 +126,4 @@ def load_tables():
 
 s3_file,filename=download_file()
 load_tables()
-s3_delete_file(os.environ['S3_BUCKET'],s3_file)
+s3_move_file(os.environ['S3_BUCKET'],s3_file)
