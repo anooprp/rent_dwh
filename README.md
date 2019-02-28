@@ -9,3 +9,12 @@ The DDL for the table is defined in the DDL txt file which is part of the code b
 data types of the table .This table design is simple and one can join tables using the 'id' column and can get the required result
 
 
+Sample Execution
+
+python data_populate.py
+
+This will create different files from the source json file and will insert data to postgres.Defined 'id' as primary key for 
+all tables to avoid chance of duplicates even if the source file corrupted our data will be safe
+
+
+
