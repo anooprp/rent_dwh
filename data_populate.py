@@ -1,5 +1,5 @@
-from rent_dwh.rent_json import RentData
-from rent_dwh.util import s3_file_download,s3_delete_file
+from rent_json import RentData
+from util import s3_file_download,s3_delete_file
 import os
 from datetime import datetime
 
