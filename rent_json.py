@@ -84,4 +84,3 @@ class RentData(object):
         conn.commit()
         cursor.close()
         conn.close()
-
