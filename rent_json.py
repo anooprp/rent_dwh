@@ -1,6 +1,6 @@
 import pandas as pd
 from pandas.io.json import json_normalize
-from util import get_postgres_con,get_columns_postgres
+from rent_dwh.util import get_postgres_con,get_columns_postgres
 import os
 
 
@@ -58,6 +58,10 @@ class RentData(object):
         conn.close()
 
         self.stage_table = table_name
+        
+        if os.path.exists(self.filename):
+            print(' File removed ')
+            os.remove(self.filename)
 
 
 
