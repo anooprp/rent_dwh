@@ -1,6 +1,6 @@
 import pandas as pd
 from pandas.io.json import json_normalize
-from rent_dwh.util import get_postgres_con,get_columns_postgres
+from util import get_postgres_con,get_columns_postgres
 import os
 
 
