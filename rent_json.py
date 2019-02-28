@@ -1,6 +1,6 @@
 import pandas as pd
 from pandas.io.json import json_normalize
-from rent_dwh.util import get_postgres_con,get_columns_postgres
+from util import get_postgres_con,get_columns_postgres
 import os
 
 
@@ -58,7 +58,7 @@ class RentData(object):
         conn.close()
 
         self.stage_table = table_name
-        
+
         if os.path.exists(self.filename):
             print(' File removed ')
             os.remove(self.filename)
@@ -78,7 +78,7 @@ class RentData(object):
             print(del_sql)
             cursor.execute(del_sql)
         v_columns = get_columns_postgres(target_table)
-        ins_sql="""insert into {tar_table}({columns}) select ({columns}) from {stg_table}""".\
+        ins_sql="""insert into {tar_table}({columns}) select {columns} from {stg_table}""".\
             format(tar_table=target_table,stg_table=self.stage_table,columns=v_columns)
         print(ins_sql)
         cursor.execute(ins_sql)
